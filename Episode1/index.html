@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css" />
+    <title>Namaste React Episode 01</title>
+  </head>
+  <body>
+    <h1>hello above root</h1>
+    <div id="root">
+      Hello shelly
+      <!-- First browser read our HTML, so it prints Hello shelly on
+      screen, then it loads react and react dom into our code then it loads
+      App.js into our code then it execute App.js code line by line. -->
+      <!-- whatever we write here is replaced by what we pasing from render method -->
+    </div>
+    <h1>hello below root</h1>
+    <!-- Hello world using HTML -->
+    <!-- <h1>Hello world</h1> -->
+    <!-- Hello world using JS -->
+    <!-- <script>
+        const heading= document.createElement("h1");
+        heading.innerHTML= "Hello world from javascript"
+        const root= document.getElementById("root");
+        root.appendChild(heading);
+    </script> -->
+    <!-- First link is for core react -->
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <!-- This is useful for DOM operation -->
+    <!-- Can't we club these two file into one? -->
+    <!-- No we can't club both files into one  because React just not only works on browser, we have React Native also.
+        so first file is like a core react thing,
+        but,this file is like a bridge between these react and browsers  
+    -->
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+
+    <script src="./App.js"></script>
+  </body>
+</html>
+<!-- 
+Will the order of this file matter ? if I place     <script src="./App.js" ></script> before cdn link what will happen?
+
+
+It will through an error, saying React is not defined
+ -->
